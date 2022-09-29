@@ -68,21 +68,21 @@ function Search(props) {
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div className="col-md d-flex">
+                                                        <div className="col-1 d-flex">
                                                             <div className="form-group p-4">
                                                                 <label htmlFor="#">Adult</label>
                                                                 <input type="text" className="form-control"
                                                                       value="1" />
                                                             </div>
                                                         </div>
-                                                        <div className="col-md d-flex">
+                                                        <div className="col-1 d-flex">
                                                             <div className="form-group p-4">
                                                                 <label htmlFor="#">Kids</label>
                                                                 <input type="text" className="form-control"
                                                                        value="0" />
                                                             </div>
                                                         </div>
-                                                        <div className="col-md d-flex">
+                                                        <div className="col-1 d-flex">
                                                             <div className="form-group p-4">
                                                                 <label htmlFor="#">Room</label>
                                                                 <input type="text" className="form-control"
