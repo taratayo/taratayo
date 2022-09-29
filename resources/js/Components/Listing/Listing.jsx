@@ -15,12 +15,11 @@ function Listing({getListData}) {
                     </LazyLoad>
                     <div className="text p-4">
                         <h3><a href="#"></a></h3>
-                        <p className="location"><span className="fa fa-map-marker"></span> Banaue, Ifugao,
-                            Philippines</p>
+                        <p className="location"><span className="fa fa-map-marker"></span> { data.location }</p>
                         <ul>
-                            <li><span className="flaticon-shower"></span>2</li>
-                            <li><span className="flaticon-king-size"></span>3</li>
-                            <li><span className="flaticon-mountains"></span>Near Mountain</li>
+                            <li><span className="flaticon-shower"></span>{ data.shower }</li>
+                            <li><span className="flaticon-king-size"></span>{ data.beds }</li>
+                            <li><span className="flaticon-mountains"></span>{ data.distance }</li>
                         </ul>
                     </div>
                 </div>
