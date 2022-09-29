@@ -1,12 +1,18 @@
 import React from 'react';
-function Listing(props) {
+import LazyLoad from 'react-lazyload'
+
+function Listing({getListData}) {
+
     return (
         <>
-            <div className="col-md-4 ftco-animate fadeInUp ftco-animated">
+            {getListData.map((data, index) => (
+            <div className="col-md-4 ftco-animate fadeInUp ftco-animated" key={index}>
                 <div className="project-wrap">
-                    <a href="#" className="img" style={{backgroundImage: `url(${props.imageUrl})`}}>
-                        <span className="price">$550/person</span>
+                    <LazyLoad>
+                    <a href="#" className="img" style={{backgroundImage: `url(${data.imageUrl})`}}>
+                        <span className="price">{data.id}</span>
                     </a>
+                    </LazyLoad>
                     <div className="text p-4">
                         <h3><a href="#"></a></h3>
                         <p className="location"><span className="fa fa-map-marker"></span> Banaue, Ifugao,
@@ -19,6 +25,7 @@ function Listing(props) {
                     </div>
                 </div>
             </div>
+            ))}
         </>
     );
 }
