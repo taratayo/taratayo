@@ -14,7 +14,7 @@ function Search(props) {
     ]);
     return (
         <>
-            <section className="ftco-section ftco-no-pb ftco-no-pt ">
+            <section className="ftco-section ftco-no-pb ftco-no-pt">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
