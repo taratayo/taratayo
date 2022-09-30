@@ -28,7 +28,7 @@ export default function Welcome(props) {
                     </div>
                 </div>
                 <div className="row mt-5">
-                    <div className="col text-center">
+                    <div className="col text-center btn btn-outline-info">
                         <div className="block-27">
                             {show < ListingData.length && (
                                 <button onClick={load_more}>Load more</button>

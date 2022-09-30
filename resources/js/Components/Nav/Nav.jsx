@@ -27,7 +27,7 @@ export default function Nav() {
                         <li className="nav-item"><a href="#destination.html" className="nav-link">Destination</a></li>
                         <li className="nav-item"><a href="#hotel.html" className="nav-link">Hotel</a></li>
                         <li className="nav-item"><a href="#blog.html" className="nav-link">Blog</a></li>
-                        <li className="nav-item"><a href="#contact.html" className="nav-link">Contact</a></li>
+                        <li className="nav-item"><a href="#contact.html" className="nav-link"></a></li>
                     </ul>
                 </div>
             </div>
