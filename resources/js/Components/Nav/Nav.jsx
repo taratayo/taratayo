@@ -1,7 +1,7 @@
 import React from 'react'
 import taratayo from '../../../../public/assets/taratayo.svg';
 
-export default function Nav({auth,}) {
+export default function Nav() {
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -27,7 +27,7 @@ export default function Nav({auth,}) {
                         <li className="nav-item"><a href="#destination.html" className="nav-link">Destination</a></li>
                         <li className="nav-item"><a href="#hotel.html" className="nav-link">Hotel</a></li>
                         <li className="nav-item"><a href="#blog.html" className="nav-link">Blog</a></li>
-                        <li className="nav-item"><a href="#contact.html" className="nav-link">{auth.user.name ? '' : ''}</a></li>
+                        <li className="nav-item"><a href="#contact.html" className="nav-link"></a></li>
                     </ul>
                 </div>
             </div>
