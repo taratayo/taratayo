@@ -14,7 +14,7 @@ function Listing({getListData}) {
                     </a>
                     </LazyLoad>
                     <div className="text p-4">
-                        <h3><a href="#"></a></h3>
+                        <h3><a href="#"> {data.title }</a></h3>
                         <p className="location"><span className="fa fa-map-marker"></span> { data.location }</p>
                         <ul>
                             <li><span className="flaticon-shower"></span>{ data.shower }</li>
