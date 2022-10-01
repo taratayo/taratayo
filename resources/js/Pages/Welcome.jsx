@@ -4,7 +4,7 @@ import Hero from "@/Components/Hero/Hero"
 import Search from "@/Components/Search/Search"
 import Listing from "@/Components/Listing/Listing"
 import ListingData from "@/Components/Listing/data"
-
+import Footer from "@/Components/Footer/Footer"
 
 export default function Welcome(props) {
     const [items, setItems] = useState(ListingData);
@@ -37,6 +37,7 @@ export default function Welcome(props) {
                     </div>
                 </div>
             </section>
+            <Footer/>
         </>
     );
 }
