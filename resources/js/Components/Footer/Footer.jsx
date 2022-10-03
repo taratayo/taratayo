@@ -62,7 +62,7 @@ function Footer(props) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>`
                     <div className="row">
                         <div className="col-md-12 text-center">
 

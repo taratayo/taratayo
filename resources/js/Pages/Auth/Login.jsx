@@ -6,7 +6,10 @@ import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/inertia-react';
-
+import image from '@/../../public/assets/images/cris-tagupa-9ZXHUr5aCwM-unsplash.jpg';
+var bg = {
+    backgroundImage: `url(${image})`
+}
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
         email: '',
@@ -31,66 +34,103 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Log in" />
+       <>
+           <div className="bg-gray-900">
+               <div className="flex justify-center h-screen">
+                   <div className="hidden bg-cover lg:block lg:w-2/3"
+                        style={bg}>
+                       <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
+                           <div>
+                               <h2 className="text-4xl font-bold text-white">Brand</h2>
 
-            {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
+                               <p className="max-w-xl mt-3 text-gray-300">Lorem ipsum dolor sit, amet consectetur
+                                   adipisicing elit. In autem ipsa, nulla laboriosam dolores, repellendus perferendis
+                                   libero suscipit nam temporibus molestiae</p>
+                           </div>
+                       </div>
+                   </div>
 
-            <form onSubmit={submit}>
-                <div>
-                    <InputLabel forInput="email" value="Email" />
+                   <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
+                       <div className="flex-1">
+                           <div className="text-center">
+                               <h2 className="text-4xl font-bold text-center text-gray-700 dark:text-white">Brand</h2>
 
-                    <TextInput
-                        type="text"
-                        name="email"
-                        value={data.email}
-                        className="mt-1 block w-full"
-                        autoComplete="username"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                    />
+                               <p className="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your account</p>
+                           </div>
 
-                    <InputError message={errors.email} className="mt-2" />
-                </div>
+                           <div className="mt-8">
+                               <form  onSubmit={submit}>
+                                   <div>
 
-                <div className="mt-4">
-                    <InputLabel forInput="password" value="Password" />
+                                       <InputLabel forInput="email" value="Email
+                                           Address" className="block mb-2 text-sm text-gray-600 dark:text-gray-200" />
 
-                    <TextInput
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="current-password"
-                        handleChange={onHandleChange}
-                    />
+                                       <TextInput
+                                           type="email"
+                                           name="email"
+                                           value={data.email}
+                                           className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400
+                                           bg-white border border-gray-200 rounded-md dark:placeholder-gray-600
+                                           dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400
+                                           dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none
+                                           focus:ring focus:ring-opacity-40"
+                                           autoComplete="username"
+                                           isFocused={true}
+                                           handleChange={onHandleChange}
+                                       />
 
-                    <InputError message={errors.password} className="mt-2" />
-                </div>
+                                       <InputError message={errors.email} className="mt-2" />
+                                   </div>
 
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox name="remember" value={data.remember} handleChange={onHandleChange} />
+                                   <div className="mt-6">
+                                       <div className="flex justify-between mb-2">
 
-                        <span className="ml-2 text-sm text-gray-600">Remember me</span>
-                    </label>
-                </div>
+                                           <InputLabel forInput="password" value="Password" className="text-sm text-gray-600 dark:text-gray-200" />
+                                           {canResetPassword && (
+                                               <Link
+                                                   href={route('password.request')}
+                                                   className="text-sm text-gray-400 focus:text-blue-500 hover:text-blue-500 hover:underline"
+                                               >
+                                                   Forgot your password?
+                                               </Link>
+                                           )}
+                                       </div>
 
-                <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
+                                       <TextInput
+                                           type="password"
+                                           name="password"
+                                           value={data.password}
+                                           className="block w-full px-4 py-2 mt-2 text-gray-700 placeholder-gray-400 bg-white border
+                                           border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700
+                                           focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                                           autoComplete="current-password"
+                                           handleChange={onHandleChange}
+                                       />
 
-                    <PrimaryButton className="ml-4" processing={processing}>
-                        Log in
-                    </PrimaryButton>
-                </div>
-            </form>
-        </GuestLayout>
+                                       <InputError message={errors.password} className="mt-2" />
+                                   </div>
+
+                                   <div className="mt-6">
+                                       <PrimaryButton className="w-full px-4 py-2 tracking-wide text-white
+                                       transition-colors duration-200 transform bg-blue-500
+                                       rounded-md hover:bg-blue-400 focus:outline-none
+                                       focus:bg-blue-400 focus:ring focus:ring-blue-300
+                                       focus:ring-opacity-50" processing={processing}>
+                                           Log in
+                                       </PrimaryButton>
+                                   </div>
+
+                               </form>
+
+                               <p className="mt-6 text-sm text-center text-gray-400">Don&#x27;t have an account yet? <a
+                                   href="#"
+                                   className="text-blue-500 focus:outline-none focus:underline hover:underline">Sign
+                                   up</a>.</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </>
     );
 }
