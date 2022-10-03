@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-//            $table->integer('street_address_id');
-//            $table->foreignIdFor(MemberStatus::class);
-            $table->string('name');
-//            $table->string('middle_name')->nullable();
-//            $table->string('last_name')->nullable();
-//            $table->date('birth_of_date');
+            $table->integer('street_address_id')->nullable();
+            $table->foreignIdFor(MemberStatus::class)->default(0);
+            $table->string('first_name');
+            $table->string('middle_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->date('birth_of_date');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
-           // $table->integer('phone_number');
+            $table->string('phone_number');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
