@@ -9,6 +9,9 @@ export default function TextInput({
     required,
     isFocused,
     handleChange,
+    placeholder,
+    maxlength,
+
 }) {
     const input = useRef();
 
@@ -21,6 +24,7 @@ export default function TextInput({
     return (
         <div className="flex flex-col items-start">
             <input
+                maxlength={maxlength}
                 type={type}
                 name={name}
                 value={value}
@@ -28,6 +32,7 @@ export default function TextInput({
                     `border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm ` +
                     className
                 }
+                placeholder={placeholder}
                 ref={input}
                 autoComplete={autoComplete}
                 required={required}

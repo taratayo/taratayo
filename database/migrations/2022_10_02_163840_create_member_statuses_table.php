@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('member_statuses', function (Blueprint $table) {
             $table->id();
             $table->smallInteger('type');
-//            $table->smallInteger('discount');
+//            $table->tinyInteger('discount');
             $table->timestamps();
         });
     }
