@@ -11,7 +11,7 @@ function Footer(props) {
                                 <h2 className="ftco-heading-2">About</h2>
                                 <p>Far far away, behind the word mountains, far from the countries Vokalia and
                                     Consonantia, there live the blind texts.</p>
-                                <ul className="ftco-footer-social list-unstyled float-md-left float-lft">
+                                <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                                     <li className="ftco-animate fadeInUp ftco-animated"><a href="#"><span
                                         className="fa fa-twitter"></span></a></li>
                                     <li className="ftco-animate fadeInUp ftco-animated"><a href="#"><span
