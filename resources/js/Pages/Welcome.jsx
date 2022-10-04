@@ -6,7 +6,7 @@ import Listing from "@/Components/Listing/Listing"
 import ListingData from "@/Components/Listing/data"
 import Footer from "@/Components/Footer/Footer"
 
-export default function Welcome(props) {
+export default function Welcome() {
     const [items, setItems] = useState(ListingData);
     const [show, setShow] = useState(12)
 

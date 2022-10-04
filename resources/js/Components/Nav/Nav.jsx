@@ -1,7 +1,7 @@
 import React from 'react'
 import taratayo from '../../../../public/assets/taratayo.svg';
 
-export default function Nav() {
+export default function Nav({auth}) {
   return (
     <>
         <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">

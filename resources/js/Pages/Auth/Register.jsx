@@ -137,7 +137,7 @@ export default function Register() {
                                     required
                                 />
 
-                                <InputError message={errors.email} className="mt-2" />
+                                <InputError message={errors.email} className="text-xs italic text-red-500" />
                             </div>
                             <div class="mb-4 md:flex md:justify-between">
                                 <div class="mb-4 md:mr-2 md:mb-0">
@@ -153,7 +153,7 @@ export default function Register() {
                                         required
                                     />
 
-                                    <InputError message={errors.password} className="mt-2" />
+                                    <InputError message={errors.password} className="text-xs italic text-red-500" />
                                 </div>
                                 <div class="md:ml-2">
                                     <InputLabel forInput="password_confirmation" value="Confirm Password" className="block mb-2 text-sm font-bold text-gray-700" />
@@ -167,7 +167,7 @@ export default function Register() {
                                         required
                                     />
 
-                                    <InputError message={errors.password_confirmation} className="mt-2" />
+                                    <InputError message={errors.password_confirmation} className="text-xs italic text-red-500" />
                                 </div>
                             </div>
                             <div class="mb-6 text-center">
@@ -177,12 +177,9 @@ export default function Register() {
                             </div>
                             <hr class="mb-6 border-t" />
                             <div class="text-center">
-                                <a
-                                    class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                    href="#"
-                                >
+                                <Link href={route('password.request')} className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
                                     Forgot Password?
-                                </a>
+                                </Link>
                             </div>
                             <div class="text-center">
                                 <Link href={route('login')} className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
