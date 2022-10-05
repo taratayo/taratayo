@@ -12,7 +12,6 @@ export default function Welcome() {
 
     const slice_items = items.slice(0, show);
 
-
     const load_more = () => {
         setShow((prevValue) => prevValue + 6)
     }
