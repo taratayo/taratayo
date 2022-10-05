@@ -26,11 +26,11 @@ export default function Welcome() {
                         <Listing getListData={slice_items} />
                     </div>
                 </div>
-                <div className="row mt-5">
-                    <div className="col text-center btn btn-outline-info">
-                        <div className="block-27">
+                <div className="row mt-5 justify-content-center">
+                    <div className="col-1 text-center">
+                        <div className="block-27 bg-orange-600 text-white rounded hover:bg-orange-700 hover:border-2 hover:text-white hover:border-orange-800 border-2 border-transparent shadow-md">
                             {show < ListingData.length && (
-                                <button onClick={load_more}>Load more</button>
+                                <button onClick={load_more} class="w-full p-2">Load More</button>
                             )}
                         </div>
                     </div>
