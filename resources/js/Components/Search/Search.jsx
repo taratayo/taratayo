@@ -27,8 +27,7 @@ function Search(props) {
                                     </div>
                                     <div className="col-md-12 tab-wrap">
                                         <div className="tab-content" id="v-pills-tabContent">
-                                            <div className="tab-pane fade show active" id="v-pills-1" role="tabpanel"
-                                                 aria-labelledby="v-pills-nextgen-tab">
+                                            <div className="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
                                                 <form action="#" className="search-property-1">
                                                     <div className="row no-gutters">
                                                         <div className="col-lg col-md-4 col-12 d-flex">
